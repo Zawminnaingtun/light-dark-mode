@@ -2,16 +2,15 @@ import React from 'react'
 import Header from '../components/Header'
 import { Outlet } from 'react-router'
 import Container from '../components/Container'
+import ThemeLayout from './ThemeLayout'
 
 const MainLayout = () => {
   return (
     <Container>
-        <div className="" 
-        // style={{background: "#1C144D", minHeight: "100vh"}}
-        >
-        <Header />
-        <Outlet />
-        </div>
+        <ThemeLayout>
+          <Header />
+          <Outlet />
+        </ThemeLayout>
     </Container>
   )
 }

@@ -8,6 +8,7 @@ import {
 } from "../components/ui/select";
 import "../i18n";
 import { useTranslation } from "react-i18next";
+import ThemeToggle from "../features/theme/components/ThemeToggle";
 
 const Header = () => {
   const { t, i18n } = useTranslation();
@@ -21,7 +22,8 @@ const Header = () => {
       className="w-full h-16 flex justify-between items-center text-white text-2xl font-bold"
     >
       <div className="">{t("myName")}</div>
-      <div className="">
+      <div className="flex gap-2">
+        <ThemeToggle />
         <Select onValueChange={changeLanguage}>
           <SelectTrigger className="w-auto text-white">
             <svg
