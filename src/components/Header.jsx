@@ -9,6 +9,7 @@ import {
 import "../i18n";
 import { useTranslation } from "react-i18next";
 import ThemeToggle from "../features/theme/components/ThemeToggle";
+import HeaderItem from "./HeaderItem";
 
 const Header = () => {
   const { t, i18n } = useTranslation();
@@ -21,7 +22,10 @@ const Header = () => {
       style={{ background: "#1C144D" }}
       className="w-full h-16 flex justify-between items-center text-white text-2xl font-bold"
     >
-      <div className="">{t("myName")}</div>
+      <div className="dark:text-red-600">{t("myName")}</div>
+      <div className="">
+        <HeaderItem />
+      </div>
       <div className="flex gap-2">
         <ThemeToggle />
         <Select onValueChange={changeLanguage}>

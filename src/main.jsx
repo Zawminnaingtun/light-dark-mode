@@ -2,15 +2,17 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import ThemePage from './features/theme/page/ThemePage'
-import router from './router/router'
+// import router from './router/router'
 import { RouterProvider } from 'react-router'
 import Layout from './layout'
+import MainRouter from './router/MainRouter'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    {/* <RouterProvider router={router} /> */}
     {/* <Layout>
       <ThemePage />
     </Layout> */}
+    <MainRouter />
   </StrictMode>,
 )
