@@ -8,7 +8,7 @@ const MainLayout = () => {
   return (
     <Container>
         <ThemeLayout>
-          <Header />
+          {/* <Header /> */}
           <Outlet />
         </ThemeLayout>
     </Container>
